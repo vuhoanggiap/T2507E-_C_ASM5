@@ -19,11 +19,7 @@ int main(){
 		for(int uoc = 1;uoc <= i ;uoc++){
 			if(i % uoc == 0 ){
 				dem++;
-			}else{
-				printf("khong co so nguyen to nao ca!");
-				return 0;
 			}
-			
 		}
 		if(dem == 2){
 			printf("%d\n",i);
@@ -31,3 +27,4 @@ int main(){
 	}
 	
 }
+
