@@ -1,19 +1,21 @@
 #include <stdio.h>
 
-	int n,n2;
-	printf("nhap so nguyen n thu nhat: ");
-	scanf("%d",&n);
-	printf("nhap so nguyen n thu hai: ");
-	scanf("%d",&n2);
-	
-	int uoc = 1;
-	int ucln;
-	while(uoc <= n){
-		if(n % uoc == 0 && n2 % uoc == 0){
-			printf("tong cac uoc cua so do la: %d",ucln);
-			break;
-		}
-		uoc--;
-	};
-	return 0;
-}
+int main() {
+    int a, b;
+    printf("Nhap 2 so a, b: ");
+    scanf("%d %d", &a, &b);
+
+    int x = a, y = b;
+    while (y != 0) {
+        int r = x % y;
+        x = y;
+        y = r;
+    }
+    int ucln = x;
+
+    int bcnn = (a * b) / ucln;
+
+    printf("UCLN cua %d va %d la: %d\n", a, b, ucln);
+    printf("BCNN cua %d va %d la: %d\n", a, b, bcnn);
+
+    return 0;
